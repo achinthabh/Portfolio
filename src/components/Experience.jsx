@@ -3,47 +3,40 @@ import './components.css'
 const Experience = () => {
   const experiences = [
     {
-      role: 'DevOps Engineer',
-      company: 'Freelance / Personal Projects',
-      period: '2023 - Present',
-      description: 'Building and automating cloud infrastructure, implementing CI/CD pipelines, and containerizing applications.',
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions'],
+      role: 'Undergraduate Student',
+      company: 'Computer Networks',
+      period: '2024 - Present',
+      description: 'Pursuing degree in Computer Networks with focus on cloud infrastructure, network security, and DevOps practices.',
+      technologies: ['Networking', 'Cloud Computing', 'Cybersecurity', 'System Administration'],
       achievements: [
-        'Reduced deployment time by 80% through automation',
-        'Implemented infrastructure as code for consistent environments',
-        'Set up monitoring and alerting for critical applications'
+        'Building foundational knowledge in networking protocols and architectures',
+        'Developing hands-on skills through lab projects and coursework',
+        'Applying DevOps concepts to academic projects and assignments'
       ]
     },
     {
-      role: 'Software Developer',
-      company: 'Previous Role / Education',
-      period: '2022 - 2023',
-      description: 'Full-stack development with focus on backend APIs and database design.',
-      technologies: ['Spring Boot', 'React', 'PostgreSQL', 'REST APIs'],
+      role: 'Dropshipping & E-commerce Entrepreneur',
+      company: 'Freelance Business',
+      period: '2017 - Present',
+      description: 'Managing online stores, supplier coordination, and digital marketing campaigns for various e-commerce ventures.',
+      technologies: ['E-commerce Platforms', 'Digital Marketing', 'Supplier Management', 'Customer Service'],
       achievements: [
-        'Developed scalable microservices architecture',
-        'Optimized database queries improving performance by 40%',
-        'Implemented automated testing suite'
+        'Managed multiple successful online stores generating consistent revenue',
+        'Developed supplier networks and streamlined order fulfillment processes',
+        'Implemented digital marketing strategies to drive traffic and sales'
       ]
     }
-  ]
-
-  const certifications = [
-    { name: 'AWS Certified Cloud Practitioner', status: 'In Progress', issuer: 'AWS' },
-    { name: 'Docker & Kubernetes: The Practical Guide', status: 'Completed', issuer: 'Udemy' },
-    { name: 'Terraform for Beginners', status: 'Completed', issuer: 'Coursera' },
-    { name: 'Git Complete Guide', status: 'Completed', issuer: 'Udemy' }
   ]
 
   return (
     <section id="experience" className="experience">
       <div className="container">
         <div className="section-title">
-          <h2>Experience & Certifications</h2>
-          <p>My professional journey and continuous learning in DevOps</p>
+          <h2>Experience & Education</h2>
+          <p>My journey combining entrepreneurship, education, and technical development</p>
         </div>
         
-        <div className="experience-container">
+        <div className="timeline-wrapper">
           <div className="timeline">
             {experiences.map((exp, idx) => (
               <div key={idx} className="timeline-item">
@@ -72,58 +65,6 @@ const Experience = () => {
                 </div>
               </div>
             ))}
-          </div>
-          
-          <div className="certifications">
-            <h3>Certifications & Learning</h3>
-            <div className="certs-grid">
-              {certifications.map((cert, idx) => (
-                <div key={idx} className="cert-card">
-                  <div className="cert-header">
-                    <h4>{cert.name}</h4>
-                    <span className={`cert-status ${cert.status.toLowerCase()}`}>
-                      {cert.status}
-                    </span>
-                  </div>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                  <div className="cert-progress">
-                    <div 
-                      className="progress-bar" 
-                      style={{ 
-                        width: cert.status === 'Completed' ? '100%' : 
-                               cert.status === 'In Progress' ? '60%' : '0%' 
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="learning-path">
-              <h4>Learning Path</h4>
-              <div className="path-steps">
-                <div className="path-step active">
-                  <span className="step-number">1</span>
-                  <span className="step-text">Cloud Fundamentals (AWS/GCP)</span>
-                </div>
-                <div className="path-step active">
-                  <span className="step-number">2</span>
-                  <span className="step-text">Containerization (Docker)</span>
-                </div>
-                <div className="path-step active">
-                  <span className="step-number">3</span>
-                  <span className="step-text">Orchestration (Kubernetes)</span>
-                </div>
-                <div className="path-step">
-                  <span className="step-number">4</span>
-                  <span className="step-text">CI/CD Automation</span>
-                </div>
-                <div className="path-step">
-                  <span className="step-number">5</span>
-                  <span className="step-text">Infrastructure as Code</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

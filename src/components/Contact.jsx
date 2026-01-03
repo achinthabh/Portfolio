@@ -25,7 +25,7 @@ const Contact = () => {
   }
 
   const contactInfo = [
-    { icon: '✉️', title: 'Email', value: 'achintha@example.com', link: 'mailto:achintha@example.com' },
+    { icon: '✉️', title: 'Email', value: 'achinthabhanuka45@gmail.com', link: 'mailto:achinthabhanuka45@gmail.com' },
     { icon: '💼', title: 'LinkedIn', value: 'linkedin.com/in/achintha', link: 'https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266' },
     { icon: '🐙', title: 'GitHub', value: 'github.com/achinthabh', link: 'https://github.com/achinthabh' },
     { icon: '📍', title: 'Location', value: 'Colombo, Sri Lanka', link: null }
@@ -75,7 +75,7 @@ const Contact = () => {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="https://dev.to" target="_blank" rel="noopener noreferrer">
+              <a href="https://dev.to/achintha_bhanukawjerathn" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-dev"></i>
               </a>
             </div>

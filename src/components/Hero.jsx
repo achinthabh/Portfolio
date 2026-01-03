@@ -6,24 +6,35 @@ const Hero = () => {
     }
   }
 
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Replace with your actual CV file path
+    const cvUrl = '/documents/Achintha_Bhanuka_CV.pdf'
+    
+    // Create a temporary link element
+    const link = document.createElement('a')
+    link.href = cvUrl
+    link.download = 'Achintha_Bhanuka_CV.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section id="home" className="hero">
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badges">
             <span className="badge student">🎓 Computer Networks Undergraduate</span>
-            <span className="badge devops"> Exploring Networking, Cloud & Security Foundations 🚀</span>
+          </div>
+
+          <div className="hero-tagline">
+            <h2>Cloud | Network | DevOps Foundations</h2>
+            <h3>One Step at a Time</h3>
           </div>
           
-          <h1 className="hero-title">
-            Learning <span className="gradient-text">DevOps<br>Devops</span> 
-            <br />One Step at a Time
-          </h1>
-          
           <p className="hero-description">
-            I'm an undergraduate student passionate about cloud infrastructure, automation, 
-            and deployment pipelines. Currently building my DevOps skills through hands-on 
-            projects and continuous learning.
+            As a Computer Networks student, I'm developing hands-on skills in cloud architecture, network security, and DevOps practices. My learning path includes AWS fundamentals, infrastructure as code, and building resilient, secure systems.
           </p>
           
           <div className="hero-actions">
@@ -34,11 +45,12 @@ const Hero = () => {
               <i className="fas fa-project-diagram"></i> View Learning Projects
             </button>
             
+            {/* UPDATED BUTTON - Changed to Download CV */}
             <button 
               className="btn btn-secondary"
-              onClick={() => scrollToSection('learning')}
+              onClick={handleDownloadCV}
             >
-              <i className="fas fa-graduation-cap"></i> My Learning Journey
+              <i className="fas fa-download"></i> Download My CV
             </button>
           </div>
           
