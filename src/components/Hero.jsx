@@ -1,3 +1,5 @@
+import './components.css'
+
 const Hero = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
@@ -9,7 +11,7 @@ const Hero = () => {
   // Function to handle CV download
   const handleDownloadCV = () => {
     // Replace with your actual CV file path
-    const cvUrl = '/documents/Achintha_Bhanuka_CV.pdf'
+    const cvUrl = '/achinthabhanuka.pdf'
     
     // Create a temporary link element
     const link = document.createElement('a')
@@ -45,7 +47,6 @@ const Hero = () => {
               <i className="fas fa-project-diagram"></i> View Learning Projects
             </button>
             
-            {/* UPDATED BUTTON - Changed to Download CV */}
             <button 
               className="btn btn-secondary"
               onClick={handleDownloadCV}
@@ -94,16 +95,6 @@ const Hero = () => {
               <p>./projects/learning_journal.md</p>
               <p>./projects/docker_setup_guide.md</p>
               <p><span className="blinking-cursor">_</span></p>
-            </div>
-          </div>
-          
-          <div className="student-motivation">
-            <div className="motivation-card">
-              <p>
-                "My goal is to secure a <strong>DevOps internship</strong> where I can 
-                contribute while accelerating my learning under experienced mentors."
-              </p>
-              <div className="motivation-author">- Achintha Bhanuka</div>
             </div>
           </div>
         </div>

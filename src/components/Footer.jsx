@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">
             <h3>Achintha Bhanuka</h3>
-            <p>DevOps Engineer & Cloud Specialist</p>
+            
           </div>
           
           <div className="footer-links">
@@ -44,7 +44,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <p>&copy; {currentYear} Achintha Bhanuka. All rights reserved.</p>
-          <p>Built with React, Vite, and DevOps passion.</p>
+          
         </div>
       </div>
     </footer>

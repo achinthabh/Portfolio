@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './components.css'
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -50,19 +50,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div>
 
         <div className="nav-actions">
-          <button
-            className="theme-toggle"
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle theme"
-          >
-            {darkMode ? '☀️' : '🌙'}
-          </button>
-
           <a
             href="https://github.com/achinthabh"
             target="_blank"
             rel="noopener noreferrer"
             className="github-link"
+            aria-label="GitHub Profile"
           >
             <i className="fab fa-github"></i>
           </a>
