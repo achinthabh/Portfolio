@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
           <span className="logo-text">Achintha Bhanuka</span>
-          <span className="logo-subtitle">DevOps Engineer</span>
+          
         </div>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
