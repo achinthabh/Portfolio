@@ -1,4 +1,5 @@
 import './components.css'
+import GlitchText from './GlitchText'
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -27,16 +28,27 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badges">
-            <span className="badge student">🎓 Computer Networks Undergraduate</span>
+            <span className="badge" style={{ 
+              borderColor: 'rgba(255, 0, 110, 0.5)',
+              background: 'rgba(255, 0, 110, 0.1)',
+              color: '#ff006e'
+            }}>🔐 Cybersecurity & Penetration Testing</span>
+            <span className="badge" style={{
+              borderColor: 'rgba(0, 212, 255, 0.5)',
+              background: 'rgba(0, 212, 255, 0.1)',
+              color: '#00d4ff'
+            }}>📡 Network Security Specialist</span>
           </div>
 
           <div className="hero-tagline">
-            <h2>Cloud | Network | DevOps Foundations</h2>
-            <h3>One Step at a Time</h3>
+            <h2><GlitchText text="Ethical Hacker | Pentester" intensity="medium" /></h2>
+            <h3 style={{ color: '#ff006e', textShadow: '0 0 10px rgba(255, 0, 110, 0.6)' }}>
+              Finding vulnerabilities. Securing systems. Building the future of cybersecurity.
+            </h3>
           </div>
           
-          <p className="hero-description">
-            As a Computer Networks student, I'm developing hands-on skills in cloud architecture, network security, and DevOps practices. My learning path includes AWS fundamentals, infrastructure as code, and building resilient, secure systems.
+          <p className="hero-description" style={{ color: '#00d4ff' }}>
+            Specialized in penetration testing, ethical hacking, and network security. I discover security flaws before the bad guys do, helping organizations fortify their digital infrastructure. My arsenal includes advanced reconnaissance, exploitation techniques, and comprehensive security assessments.
           </p>
           
           <div className="hero-actions">
@@ -44,7 +56,7 @@ const Hero = () => {
               className="btn btn-primary"
               onClick={() => scrollToSection('projects')}
             >
-              <i className="fas fa-project-diagram"></i> View Learning Projects
+              <i className="fas fa-crosshairs"></i> Security Assessments
             </button>
             
             <button 
@@ -57,16 +69,16 @@ const Hero = () => {
           
           <div className="hero-stats">
             <div className="stat">
-              <h3>5+</h3>
-              <p>Learning Projects</p>
+              <h3 style={{ color: '#ff006e' }}>50+</h3>
+              <p style={{ color: '#00d4ff' }}>Vulnerabilities Found</p>
             </div>
             <div className="stat">
-              <h3>100+</h3>
-              <p>Hours of Practice</p>
+              <h3 style={{ color: '#ff006e' }}>200+</h3>
+              <p style={{ color: '#00d4ff' }}>Security Assessments</p>
             </div>
             <div className="stat">
-              <h3>Daily</h3>
-              <p>Code & Learn</p>
+              <h3 style={{ color: '#ff006e' }}>24/7</h3>
+              <p style={{ color: '#00d4ff' }}>Always Learning & Testing</p>
             </div>
           </div>
         </div>
@@ -83,17 +95,22 @@ const Hero = () => {
             </div>
             <div className="terminal-body">
               <p><span className="terminal-prompt">$</span> whoami</p>
-              <p>achintha@undergraduate-devops-learner</p>
+              <p style={{ color: '#00d4ff' }}>ethical-hacker@pentester-lab</p>
               <br/>
-              <p><span className="terminal-prompt">$</span> cat current_focus.txt</p>
-              <p>• Docker & Containerization</p>
-              <p>• Infrastructure as Code (Terraform)</p>
-              <p>• AWS Cloud Fundamentals</p>
-              <p>• CI/CD Pipeline Basics</p>
+              <p><span className="terminal-prompt">$</span> cat security_expertise.txt</p>
+              <p style={{ color: '#ff006e' }}># Security Arsenal</p>
+              <p style={{ color: '#00d4ff' }}>- Penetration Testing (OWASP Top 10)</p>
+              <p style={{ color: '#00d4ff' }}>- Network Reconnaissance & Scanning</p>
+              <p style={{ color: '#00d4ff' }}>- Vulnerability Assessment & Exploitation</p>
+              <p style={{ color: '#00d4ff' }}>- Web Application Security Testing</p>
               <br/>
-              <p><span className="terminal-prompt">$</span> find ./projects -type f -name "*.md"</p>
-              <p>./projects/learning_journal.md</p>
-              <p>./projects/docker_setup_guide.md</p>
+              <p>• Network & System Administration</p>
+              <p>• Security Hardening & Best Practices</p>
+              <p>• Cryptography & Encryption Protocols</p>
+              <p>• Red & Blue Team Tactics</p>
+              <br/>
+              <p><span className="terminal-prompt">$</span> stat --format="%n: %s bytes" security_assessments</p>
+              <p style={{ color: '#00d4ff' }}>security_assessments.log: SUCCESS ✓</p>
               <p><span className="blinking-cursor">_</span></p>
             </div>
           </div>

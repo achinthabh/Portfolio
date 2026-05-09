@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import './components.css'
 
 const Projects = () => {
+  const [selectedType, setSelectedType] = useState(null)
+
   const projects = [
     // ===== NEW LINKEDIN PROJECTS ADDED HERE =====
     {
@@ -156,6 +159,14 @@ const Projects = () => {
     }
   ]
 
+  // Get unique project types for filtering
+  const projectTypes = ['All', ...new Set(projects.map(p => p.type))]
+  
+  // Filter projects based on selected type
+  const filteredProjects = selectedType && selectedType !== 'All'
+    ? projects.filter(p => p.type === selectedType)
+    : projects
+
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -164,10 +175,22 @@ const Projects = () => {
           <p>Full-stack development projects & DevOps learning initiatives</p>
         </div>
         
-        {/* REMOVED: Project Filter Tabs Section */}
+        {/* Project Filter Tabs */}
+        <div className="project-filters" role="group" aria-label="Filter projects by type">
+          {projectTypes.map(type => (
+            <button
+              key={type}
+              className={`filter-btn ${selectedType === type || (!selectedType && type === 'All') ? 'active' : ''}`}
+              onClick={() => setSelectedType(type === 'All' ? null : type)}
+              aria-pressed={selectedType === type || (!selectedType && type === 'All')}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
         
         <div className="projects-grid">
-          {projects.map((project, idx) => (
+          {filteredProjects.map((project, idx) => (
             <div key={idx} className={`project-card ${project.level === 'Learning Project' ? 'learning-project' : 'real-project'}`}>
               <div className="project-header">
                 <div className="project-type">{project.type}</div>

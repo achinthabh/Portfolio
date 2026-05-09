@@ -1,0 +1,318 @@
+/* Cybersecurity Animations - Hacker/Matrix Theme */
+
+@keyframes glitch-text {
+  0%, 100% {
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+  }
+  50% {
+    text-shadow: -2px 2px 15px #00ff41, 2px -2px 15px #ff0033;
+  }
+}
+
+@keyframes flicker {
+  0%, 10%, 20%, 30%, 100% {
+    text-shadow: 0 0 10px #00ff41;
+  }
+  5%, 15%, 25% {
+    text-shadow: 0 0 20px #00ff41, 0 0 30px #0055ff, 0 0 5px #ff0033;
+  }
+}
+
+@keyframes scanline-sweep {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3), inset 0 0 10px rgba(0, 255, 65, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.6), inset 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) rotateZ(10deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px) rotateZ(-10deg);
+  }
+}
+
+@keyframes code-type {
+  0% {
+    width: 0;
+    border-right: 2px solid #00ff41;
+  }
+  100% {
+    width: 100%;
+    border-right: 2px solid transparent;
+  }
+}
+
+@keyframes loading-spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes loading-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes security-scan {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes hack-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes circuit-flow {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glitch-shift {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+  }
+  14% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+  }
+  15%, 49% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 20px #00ff41;
+  }
+  50%, 89% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+  }
+  90%, 100% {
+    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+  }
+}
+
+@keyframes scroll-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes digital-ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 30px rgba(0, 255, 65, 0);
+  }
+}
+
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  1% {
+    width: 100%;
+  }
+}
+
+@keyframes crt-flicker {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+  }
+  2% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0);
+  }
+  4% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+  }
+  19% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+  }
+  21% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0);
+  }
+  23% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+  }
+}
+
+@keyframes bounce-glow {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+  }
+  50% {
+    transform: translateY(-20px);
+    box-shadow: 0 0 40px rgba(0, 255, 65, 0.8);
+  }
+}
+
+@keyframes fade-in-stagger {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grid-bg-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes neon-box-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.2), inset 0 0 5px rgba(0, 255, 65, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.5), inset 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+}
+
+@keyframes security-badge-spin {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+  }
+  50% {
+    transform: rotateZ(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotateZ(360deg) scale(1);
+  }
+}
+
+@keyframes hack-text-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes digital-noise {
+  0%, 100% {
+    filter: contrast(100%);
+  }
+  5% {
+    filter: contrast(200%);
+  }
+  10% {
+    filter: contrast(100%);
+  }
+}
+
+@keyframes danger-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 0, 51, 0.8);
+  }
+}
+
+@keyframes success-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.8);
+  }
+}
