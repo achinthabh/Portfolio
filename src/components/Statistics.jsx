@@ -3,24 +3,24 @@ import './components.css'
 const Statistics = () => {
   const stats = [
     {
-      number: '5+',
-      label: 'Learning Projects',
-      description: 'Hands-on cloud and DevOps projects'
-    },
-    {
-      number: '100+',
-      label: 'Hours of Practice',
-      description: 'Dedicated learning and development'
+      number: '10+',
+      label: 'Projects Built',
+      description: 'Full-stack, backend & DevOps projects'
     },
     {
       number: '10+',
-      label: 'Tech Skills',
-      description: 'Cloud, networking, and DevOps tools'
+      label: 'Certifications',
+      description: 'Cisco, Fortinet, Linux Foundation & more'
+    },
+    {
+      number: '6+',
+      label: 'Tech Stacks',
+      description: 'Cloud, containers, IaC, CI/CD & networking'
     },
     {
       number: '2024',
-      label: 'Started Journey',
-      description: 'Computer Networks student'
+      label: 'Degree Started',
+      description: 'BSc Computer Networks'
     }
   ]
 

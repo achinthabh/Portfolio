@@ -9,12 +9,8 @@ const Hero = () => {
     }
   }
 
-  // Function to handle CV download
   const handleDownloadCV = () => {
-    // Replace with your actual CV file path
     const cvUrl = '/achinthabhanuka.pdf'
-    
-    // Create a temporary link element
     const link = document.createElement('a')
     link.href = cvUrl
     link.download = 'Achintha_Bhanuka_CV.pdf'
@@ -28,61 +24,62 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badges">
-            <span className="badge" style={{ 
+            <span className="badge" style={{
               borderColor: 'rgba(255, 0, 110, 0.5)',
               background: 'rgba(255, 0, 110, 0.1)',
               color: '#ff006e'
-            }}>🔐 Cybersecurity & Penetration Testing</span>
+            }}>🔐 Cybersecurity & Pentesting</span>
             <span className="badge" style={{
               borderColor: 'rgba(0, 212, 255, 0.5)',
               background: 'rgba(0, 212, 255, 0.1)',
               color: '#00d4ff'
-            }}>📡 Network Security Specialist</span>
+            }}>⚙️ Cloud & DevOps</span>
           </div>
 
           <div className="hero-tagline">
-            <h2><GlitchText text="Ethical Hacker | Pentester" intensity="medium" /></h2>
-            <h3 style={{ color: '#ff006e', textShadow: '0 0 10px rgba(255, 0, 110, 0.6)' }}>
-              Finding vulnerabilities. Securing systems. Building the future of cybersecurity.
+            <h2><GlitchText text="Cybersecurity Student" intensity="medium" /></h2>
+            <h3 style={{ color: '#ff006e', textShadow: '0 0 12px rgba(255, 0, 110, 0.6)' }}>
+              Penetration Testing · Network Security · Ethical Hacking
             </h3>
           </div>
-          
-          <p className="hero-description" style={{ color: '#00d4ff' }}>
-            Specialized in penetration testing, ethical hacking, and network security. I discover security flaws before the bad guys do, helping organizations fortify their digital infrastructure. My arsenal includes advanced reconnaissance, exploitation techniques, and comprehensive security assessments.
+
+          <p className="hero-description" style={{ color: 'var(--text-secondary)' }}>
+            Computer Networks student actively pursuing a cybersecurity career. I build real security tools — from AI-powered vulnerability scanners to phishing detectors — and hold multiple industry certifications from Cisco and Fortinet. Currently seeking cybersecurity internship opportunities.
           </p>
-          
+
           <div className="hero-actions">
-            <button 
+            <button
               className="btn btn-primary"
               onClick={() => scrollToSection('projects')}
+              style={{ background: 'linear-gradient(135deg, #ff006e, #8b5cf6)' }}
             >
-              <i className="fas fa-crosshairs"></i> Security Assessments
+              <i className="fas fa-shield-alt"></i> View Security Projects
             </button>
-            
-            <button 
+
+            <button
               className="btn btn-secondary"
               onClick={handleDownloadCV}
             >
-              <i className="fas fa-download"></i> Download My CV
+              <i className="fas fa-download"></i> Download CV
             </button>
           </div>
-          
+
           <div className="hero-stats">
             <div className="stat">
-              <h3 style={{ color: '#ff006e' }}>50+</h3>
-              <p style={{ color: '#00d4ff' }}>Vulnerabilities Found</p>
+              <h3 style={{ color: '#ff006e' }}>3+</h3>
+              <p style={{ color: 'var(--text-secondary)' }}>Security Tools Built</p>
             </div>
             <div className="stat">
-              <h3 style={{ color: '#ff006e' }}>200+</h3>
-              <p style={{ color: '#00d4ff' }}>Security Assessments</p>
+              <h3 style={{ color: '#ff006e' }}>10+</h3>
+              <p style={{ color: 'var(--text-secondary)' }}>Certifications Earned</p>
             </div>
             <div className="stat">
-              <h3 style={{ color: '#ff006e' }}>24/7</h3>
-              <p style={{ color: '#00d4ff' }}>Always Learning & Testing</p>
+              <h3 style={{ color: '#ff006e' }}>10+</h3>
+              <p style={{ color: 'var(--text-secondary)' }}>Projects Built</p>
             </div>
           </div>
         </div>
-        
+
         <div className="hero-visual">
           <div className="learning-terminal">
             <div className="terminal-header">
@@ -91,26 +88,25 @@ const Hero = () => {
                 <span className="dot yellow"></span>
                 <span className="dot green"></span>
               </div>
-              <span className="terminal-title">bash — student@devops-learning</span>
+              <span className="terminal-title">bash — kali@pentester-lab</span>
             </div>
             <div className="terminal-body">
               <p><span className="terminal-prompt">$</span> whoami</p>
-              <p style={{ color: '#00d4ff' }}>ethical-hacker@pentester-lab</p>
+              <p style={{ color: '#ff006e' }}>achintha-bhanuka | cybersecurity-student</p>
               <br/>
-              <p><span className="terminal-prompt">$</span> cat security_expertise.txt</p>
-              <p style={{ color: '#ff006e' }}># Security Arsenal</p>
-              <p style={{ color: '#00d4ff' }}>- Penetration Testing (OWASP Top 10)</p>
-              <p style={{ color: '#00d4ff' }}>- Network Reconnaissance & Scanning</p>
-              <p style={{ color: '#00d4ff' }}>- Vulnerability Assessment & Exploitation</p>
-              <p style={{ color: '#00d4ff' }}>- Web Application Security Testing</p>
+              <p><span className="terminal-prompt">$</span> cat skills.txt</p>
+              <p style={{ color: '#ff006e' }}># 🔐 Security Arsenal</p>
+              <p style={{ color: '#00d4ff' }}>- AI Web Vulnerability Scanner (SQLi + XSS)</p>
+              <p style={{ color: '#00d4ff' }}>- Phishing URL & Email Detection</p>
+              <p style={{ color: '#00d4ff' }}>- Password Security & Hash Analysis</p>
+              <p style={{ color: '#00d4ff' }}>- Network Reconnaissance (Nmap, Wireshark)</p>
               <br/>
-              <p>• Network & System Administration</p>
-              <p>• Security Hardening & Best Practices</p>
-              <p>• Cryptography & Encryption Protocols</p>
-              <p>• Red & Blue Team Tactics</p>
+              <p style={{ color: '#ff006e' }}># ⚙️ DevOps Stack</p>
+              <p>• Docker · Kubernetes · Terraform · AWS</p>
+              <p>• CI/CD Pipelines · GitHub Actions</p>
               <br/>
-              <p><span className="terminal-prompt">$</span> stat --format="%n: %s bytes" security_assessments</p>
-              <p style={{ color: '#00d4ff' }}>security_assessments.log: SUCCESS ✓</p>
+              <p><span className="terminal-prompt">$</span> nmap -sV --open target.com</p>
+              <p style={{ color: '#00d4ff' }}>Scanning... found 3 open ports ✓</p>
               <p><span className="blinking-cursor">_</span></p>
             </div>
           </div>

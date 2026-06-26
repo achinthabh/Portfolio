@@ -77,13 +77,7 @@ const Contact = () => {
       const templateID = 'template_hbbg1rd'
       const userID = 'vJcMOUasCs5Lw7kKI'
 
-      console.log('Sending email with params:', templateParams)
-      console.log('Using service:', serviceID, 'template:', templateID, 'user:', userID)
-
-      // Send email using EmailJS
       const response = await emailjs.send(serviceID, templateID, templateParams, userID)
-      
-      console.log('Email sent successfully:', response)
       
       setSuccess(true)
       setFormData({ name: '', email: '', subject: '', message: '' })
@@ -93,7 +87,6 @@ const Contact = () => {
       }, 5000)
       
     } catch (err) {
-      console.error('Failed to send message:', err)
       
       // More detailed error messages
       if (err.text && err.text.includes('Invalid login')) {

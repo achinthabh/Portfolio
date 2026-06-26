@@ -4,21 +4,20 @@ export const PORTFOLIO_CONFIG = {
   // Personal Information
   personal: {
     name: 'Achintha Bhanuka',
-    title: 'Computer Networks Student',
-    subtitle: 'Cloud & DevOps Developer',
-    tagline: 'One Step at a Time',
-    description: 'Computer Networks student developing hands-on skills in cloud architecture, network security, and DevOps practices.',
-    email: 'contact@achinthabhanuka.com',
-    phone: '+94 (your number)',
-    location: 'Sri Lanka'
+    title: 'Cybersecurity Student',
+    subtitle: 'Penetration Testing · Network Security · DevOps',
+    tagline: 'Finding vulnerabilities. Securing networks. Automating systems.',
+    description: 'Computer Networks undergraduate student at NSBM Green University with hands-on experience in penetration testing, network security, and DevOps practices. Passionate about automating security checks and building resilient infrastructures.',
+    email: 'achinthabhanuka45@gmail.com',
+    location: 'Colombo, Sri Lanka'
   },
 
   // Social Links
   social: {
     github: 'https://github.com/achinthabh',
     linkedin: 'https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266',
-    twitter: 'https://twitter.com/achinthabhanuka',
-    email: 'mailto:contact@achinthabhanuka.com'
+    devto: 'https://dev.to/achintha_bhanukawjerathn',
+    email: 'mailto:achinthabhanuka45@gmail.com'
   },
 
   // Navigation Items
@@ -27,7 +26,7 @@ export const PORTFOLIO_CONFIG = {
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Blog', id: 'blog' },
+    { name: 'Certifications', id: 'certifications' },
     { name: 'Contact', id: 'contact' }
   ],
 
@@ -79,8 +78,8 @@ export const PORTFOLIO_CONFIG = {
 
   // Features
   features: {
-    enableBlog: true,
-    enableTestimonials: true,
+    enableBlog: false,
+    enableTestimonials: false,
     enableStatistics: true,
     enableDarkMode: true,
     enableScrollProgress: true,
@@ -89,7 +88,7 @@ export const PORTFOLIO_CONFIG = {
 
   // API Configuration
   api: {
-    baseURL: process.env.REACT_APP_API_URL || 'https://api.achinthabhanuka.com',
+    baseURL: 'https://achinthabhanuka.com',
     timeout: 5000
   },
 
@@ -133,10 +132,8 @@ export const SECTIONS = {
   statistics: { enabled: true, order: 3, title: 'Statistics' },
   projects: { enabled: true, order: 4, title: 'Projects' },
   experience: { enabled: true, order: 5, title: 'Experience' },
-  blog: { enabled: true, order: 6, title: 'Blog' },
-  testimonials: { enabled: true, order: 7, title: 'Testimonials' },
-  certifications: { enabled: true, order: 8, title: 'Certifications' },
-  contact: { enabled: true, order: 9, title: 'Contact' }
+  certifications: { enabled: true, order: 6, title: 'Certifications' },
+  contact: { enabled: true, order: 7, title: 'Contact' }
 }
 
 export default PORTFOLIO_CONFIG

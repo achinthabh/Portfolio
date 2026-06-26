@@ -7,63 +7,69 @@ const Blog = () => {
   const blogs = [
     {
       id: 1,
-      title: 'Getting Started with Docker: A Beginner\'s Guide',
-      excerpt: 'Learn the fundamentals of Docker containerization and how it revolutionizes application deployment.',
-      date: 'May 15, 2024',
-      readTime: '8 min read',
-      icon: '🐳',
-      tags: ['Docker', 'DevOps', 'Containers'],
-      category: 'DevOps'
+      title: 'AI in Cyber Defense: Building a Web Vulnerability Scanner',
+      excerpt: 'Learn how to combine crawling engines with machine learning models to detect and classify web security exploits.',
+      date: 'May 20, 2024',
+      readTime: '10 min read',
+      icon: '🛡️',
+      tags: ['Security', 'AI', 'Python'],
+      category: 'Cybersecurity',
+      url: 'https://dev.to/achintha_bhanukawjerathn'
     },
     {
       id: 2,
-      title: 'AWS Fundamentals: EC2, S3, and RDS Explained',
-      excerpt: 'Dive into AWS core services and understand how to build scalable cloud infrastructure.',
-      date: 'May 10, 2024',
-      readTime: '12 min read',
-      icon: '☁️',
-      tags: ['AWS', 'Cloud', 'Infrastructure'],
-      category: 'Cloud'
+      title: 'Demystifying the OWASP Top 10 Web Vulnerabilities',
+      excerpt: 'A comprehensive guide to understanding common vulnerabilities like SQLi, XSS, and Broken Access Control.',
+      date: 'May 12, 2024',
+      readTime: '15 min read',
+      icon: '🔐',
+      tags: ['OWASP', 'Web Security', 'Pentesting'],
+      category: 'Cybersecurity',
+      url: null
     },
     {
       id: 3,
-      title: 'Understanding Kubernetes Orchestration',
-      excerpt: 'Master container orchestration with Kubernetes and deploy applications at scale.',
+      title: 'Network Packet Analysis: A Wireshark Deep Dive',
+      excerpt: 'Learn how to capture, filter, and inspect TCP/IP packet streams to analyze network security issues.',
       date: 'May 5, 2024',
-      readTime: '15 min read',
-      icon: '⛵',
-      tags: ['Kubernetes', 'Orchestration', 'DevOps'],
-      category: 'DevOps'
+      readTime: '8 min read',
+      icon: '🌐',
+      tags: ['Wireshark', 'Networking', 'Security'],
+      category: 'Networking',
+      url: null
     },
     {
       id: 4,
-      title: 'Infrastructure as Code with Terraform',
-      excerpt: 'Learn how to automate infrastructure provisioning and management using Terraform.',
+      title: 'Getting Started with Docker: A Beginner\'s Guide',
+      excerpt: 'Learn the fundamentals of Docker containerization and how it revolutionizes application deployment.',
       date: 'April 28, 2024',
-      readTime: '10 min read',
-      icon: '🏗️',
-      tags: ['Terraform', 'IaC', 'Infrastructure'],
-      category: 'Infrastructure'
+      readTime: '8 min read',
+      icon: '🐳',
+      tags: ['Docker', 'DevOps', 'Containers'],
+      category: 'DevOps',
+      url: null
     },
     {
       id: 5,
-      title: 'CI/CD Pipelines with GitHub Actions',
-      excerpt: 'Build automated deployment pipelines using GitHub Actions for continuous integration.',
+      title: 'AWS Fundamentals: EC2, S3, and RDS Explained',
+      excerpt: 'Dive into AWS core services and understand how to build scalable cloud infrastructure.',
       date: 'April 20, 2024',
-      readTime: '11 min read',
-      icon: '🔄',
-      tags: ['GitHub', 'CI/CD', 'Automation'],
-      category: 'DevOps'
+      readTime: '12 min read',
+      icon: '☁️',
+      tags: ['AWS', 'Cloud', 'Infrastructure'],
+      category: 'Cloud',
+      url: null
     },
     {
       id: 6,
-      title: 'Network Security Best Practices',
-      excerpt: 'Essential security practices for building resilient and protected network infrastructure.',
-      date: 'April 15, 2024',
-      readTime: '9 min read',
-      icon: '🔐',
-      tags: ['Security', 'Networking', 'Best Practices'],
-      category: 'Networking'
+      title: 'CI/CD Pipelines with GitHub Actions',
+      excerpt: 'Build automated deployment pipelines using GitHub Actions for continuous integration.',
+      date: 'April 10, 2024',
+      readTime: '11 min read',
+      icon: '🔄',
+      tags: ['GitHub', 'CI/CD', 'Automation'],
+      category: 'DevOps',
+      url: null
     }
   ]
 
@@ -78,7 +84,7 @@ const Blog = () => {
       <div className="container">
         <div className="section-title">
           <h2>Learning Insights</h2>
-          <p>Articles and guides about my DevOps and Cloud journey</p>
+          <p>Articles about my DevOps, Cloud, and Networking journey — published on <a href="https://dev.to/achintha_bhanukawjerathn" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>Dev.to</a></p>
         </div>
         
         <div className="project-filters" role="group" aria-label="Filter blog posts by tag">
@@ -128,10 +134,16 @@ const Blog = () => {
                   ))}
                 </div>
                 
-                <a href="#" className="blog-read-more" onClick={(e) => e.preventDefault()}>
-                  Read More
-                  <i className="fas fa-arrow-right"></i>
-                </a>
+                {blog.url ? (
+                  <a href={blog.url} target="_blank" rel="noopener noreferrer" className="blog-read-more">
+                    Read More
+                    <i className="fas fa-arrow-right"></i>
+                  </a>
+                ) : (
+                  <span className="blog-read-more" style={{ opacity: 0.5, cursor: 'default' }}>
+                    <i className="fas fa-clock"></i> Coming Soon
+                  </span>
+                )}
               </div>
             </article>
           ))}

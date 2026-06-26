@@ -5,21 +5,85 @@ const Projects = () => {
   const [selectedType, setSelectedType] = useState(null)
 
   const projects = [
-    // ===== NEW LINKEDIN PROJECTS ADDED HERE =====
+    // ===== CYBERSECURITY PROJECTS (real, built by Achintha) =====
+    {
+      title: 'AI Web Vulnerability Scanner',
+      description: 'An intelligent web security scanner that crawls target websites and automatically detects SQL Injection and XSS vulnerabilities. Uses a trained ML model to classify and confirm attack types with higher accuracy than rule-only scanners.',
+      technologies: ['Python', 'Scikit-learn', 'BeautifulSoup', 'Requests', 'Pickle'],
+      github: 'https://github.com/achinthabh',
+      live: null,
+      type: 'Cybersecurity',
+      badge: '🔍',
+      features: [
+        'Auto-crawls up to 20 pages on a target domain',
+        'SQL Injection detection with multiple payloads',
+        'XSS vulnerability scanning and validation',
+        'ML-powered attack classification model'
+      ],
+      highlight: true
+    },
+    {
+      title: 'Password Security Toolkit',
+      description: 'A desktop GUI application for password security analysis. Checks password strength, generates SHA-256 hashes, and simulates dictionary attacks to demonstrate how weak passwords are cracked in real-world scenarios.',
+      technologies: ['Python', 'Tkinter', 'Hashlib', 'Regex', 'Dictionary Attack'],
+      github: 'https://github.com/achinthabh',
+      live: null,
+      type: 'Cybersecurity',
+      badge: '🔐',
+      features: [
+        'Real-time password strength evaluation (Weak/Medium/Strong)',
+        'SHA-256 hash generation for any input',
+        'Dictionary attack simulation against hash values',
+        'Intuitive Tkinter GUI interface'
+      ],
+      highlight: true
+    },
+    {
+      title: 'Phishing Email & URL Checker',
+      description: 'A full-stack web application that detects phishing URLs and malicious emails. Features a Node.js REST API backend with heuristic analysis and a client-facing interface for real-time phishing detection.',
+      technologies: ['Node.js', 'Express', 'REST API', 'JavaScript', 'Heuristics'],
+      github: 'https://github.com/achinthabh',
+      live: null,
+      type: 'Cybersecurity',
+      badge: '🎣',
+      features: [
+        'Real-time URL phishing detection via REST API',
+        'Email header and content analysis',
+        'Pattern-based heuristic scanning engine',
+        'Full-stack architecture (Node.js + Web client)'
+      ],
+      highlight: true
+    },
+    // ===== WEB DEVELOPMENT PROJECTS =====
     {
       title: 'Master D Fan Website',
-      description: 'A tribute website for Sri Lankan hip-hop icon Master D, featuring a music player, video gallery, and responsive design. Built as a passion project to showcase modern frontend skills.',
+      description: 'A tribute website for Sri Lankan hip-hop icon Master D, featuring a music player, video gallery, and responsive design. Built as a passion project showcasing modern frontend skills.',
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'AOS.js', 'Vercel'],
       github: 'https://lnkd.in/g2PCNfF7',
       live: 'https://lnkd.in/gfDH5mA7',
-      type: 'Frontend Development',
+      type: 'Web Development',
+      badge: '🎵',
       features: [
         'Interactive music player with track previews',
         'Embedded music videos and photo gallery',
         'Fully responsive mobile-first design',
         'Modern animations and smooth transitions'
-      ],
-      note: 'Passion project showcasing UI/UX for music fans'
+      ]
+    },
+    {
+      title: 'Tourist Information Web Application',
+      description: 'A full-stack web application for Sri Lankan tourism with user registration, destination info, and booking system. Built with Java, Spring Boot, and MySQL.',
+      technologies: ['Java', 'Spring Boot', 'MySQL', 'HTML/CSS', 'JavaScript'],
+      github: 'https://github.com/achinthabh',
+      live: null,
+      type: 'Web Development',
+      badge: '🗺️',
+      features: [
+        'User authentication & authorization',
+        'CRUD operations for tourist destinations',
+        'Responsive frontend design',
+        'Database management with MySQL'
+      ]
     },
     {
       title: 'Warehouse Management System',
@@ -27,53 +91,23 @@ const Projects = () => {
       technologies: ['Java', 'Servlets', 'JSP', 'MySQL', 'Apache Tomcat'],
       github: 'https://lnkd.in/gjiq3ndc',
       live: null,
-      type: 'Backend System',
+      type: 'Web Development',
+      badge: '📦',
       features: [
         'Inventory tracking with stock level management',
         'Automated purchase and sales order processing',
         'Role-based access (admin, staff, suppliers)',
         'Reporting and inventory trend analysis'
-      ],
-      note: 'Team project - focused on backend development & database integration'
-    },
-    
-    // ===== YOUR OTHER LINKEDIN PROJECTS =====
-    {
-      title: 'Tourist Information Web Application',
-      description: 'A full-stack web application for Sri Lankan tourism with user registration, destination info, and booking system. Built with Java, Spring Boot, and MySQL.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'HTML/CSS', 'JavaScript'],
-      github: 'https://github.com/achinthabh',
-      live: null,
-      type: 'Full-Stack Development',
-      features: [
-        'User authentication & authorization',
-        'CRUD operations for tourist destinations',
-        'Responsive frontend design',
-        'Database management with MySQL'
-      ],
-      note: 'Featured on LinkedIn - Team project with Janith Wathsala'
-    },
-    {
-      title: 'Student Management System',
-      description: 'A comprehensive system for managing student records, courses, and grades with admin dashboard and reporting features.',
-      technologies: ['Java', 'Servlet', 'JSP', 'MySQL', 'Bootstrap'],
-      github: 'https://github.com/achinthabh',
-      live: null,
-      type: 'Web Application',
-      features: [
-        'Admin and student role management',
-        'Course registration system',
-        'Grade tracking and reports',
-        'Responsive admin dashboard'
       ]
     },
     {
       title: 'Hotel Management System',
-      description: 'Backend system for hotel operations including room booking, guest management, and billing.',
+      description: 'Backend system for hotel operations including room booking, guest management, and billing, built with Spring Boot REST API.',
       technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
       github: 'https://github.com/achinthabh',
       live: null,
-      type: 'Backend System',
+      type: 'Web Development',
+      badge: '🏨',
       features: [
         'Room availability management',
         'Booking and reservation system',
@@ -82,87 +116,99 @@ const Projects = () => {
       ]
     },
     {
-      title: 'E-Commerce Website',
-      description: 'Online shopping platform with product catalog, shopping cart, and checkout functionality.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      title: 'Student Management System',
+      description: 'A comprehensive system for managing student records, courses, and grades with admin dashboard and reporting features.',
+      technologies: ['Java', 'Servlet', 'JSP', 'MySQL', 'Bootstrap'],
       github: 'https://github.com/achinthabh',
       live: null,
       type: 'Web Development',
+      badge: '🎓',
       features: [
-        'Product search and filtering',
-        'Shopping cart management',
-        'User account system',
-        'Order processing workflow'
+        'Admin and student role management',
+        'Course registration system',
+        'Grade tracking and reports',
+        'Responsive admin dashboard'
       ]
     },
-    
-    // ===== YOUR DEVOPS LEARNING PROJECTS =====
+    // ===== DEVOPS LEARNING PROJECTS =====
     {
-      title: 'Automated CI/CD Pipeline for Microservices',
-      description: 'Learning project: Implementing a CI/CD pipeline using GitHub Actions, Docker, and Kubernetes.',
-      technologies: ['GitHub Actions', 'Docker', 'Kubernetes', 'Helm'],
-      github: 'https://github.com/achinthabh/devops-learning',
+      title: 'Automated CI/CD Pipeline',
+      description: 'Implementing automated build, test, and deployment pipelines using GitHub Actions, Docker, and Kubernetes for containerized microservices.',
+      technologies: ['GitHub Actions', 'Docker', 'Kubernetes', 'Helm', 'CI/CD'],
+      github: 'https://github.com/achinthabh',
       live: null,
-      type: 'CI/CD Learning',
+      type: 'DevOps',
+      badge: '🔄',
       features: [
-        'Multi-stage Docker builds',
-        'Automated testing workflow',
-        'Basic deployment strategy',
-        'Learning infrastructure concepts'
-      ],
-      level: 'Learning Project'
+        'Multi-stage Docker builds for smaller images',
+        'Automated code linting and unit testing checks',
+        'Rolling update deployments to Kubernetes cluster',
+        'Secret management using GitHub Encrypted Secrets'
+      ]
     },
     {
       title: 'Terraform AWS Infrastructure',
-      description: 'Learning project: Infrastructure as Code basics for AWS with VPC and EC2 instances.',
-      technologies: ['Terraform', 'AWS', 'VPC', 'EC2'],
-      github: 'https://github.com/achinthabh/terraform-learning',
+      description: 'Infrastructure as Code (IaC) configuration for deploying standard VPC network infrastructure and secure EC2 hosting on AWS.',
+      technologies: ['Terraform', 'AWS', 'VPC', 'EC2', 'Security Groups'],
+      github: 'https://github.com/achinthabh',
       live: null,
-      type: 'Infrastructure Learning',
+      type: 'DevOps',
+      badge: '🏗️',
       features: [
-        'Basic Terraform modules',
-        'AWS resource provisioning',
-        'State file management',
-        'Cost optimization learning'
-      ],
-      level: 'Learning Project'
+        'Modular Terraform codebase for easy reuse',
+        'Custom VPC with Public and Private Subnets',
+        'State file locking with AWS S3 and DynamoDB',
+        'Auto Scaling groups with Application Load Balancers'
+      ]
     },
     {
       title: 'Kubernetes Monitoring Stack',
-      description: 'Learning project: Setting up monitoring with Prometheus and Grafana on local Kubernetes.',
-      technologies: ['Prometheus', 'Grafana', 'Kubernetes', 'Helm'],
-      github: 'https://github.com/achinthabh/k8s-monitoring',
+      description: 'Setting up cluster-wide monitoring and observability using Prometheus operator and custom Grafana visualization dashboards.',
+      technologies: ['Prometheus', 'Grafana', 'Kubernetes', 'Helm', 'Slack Alerts'],
+      github: 'https://github.com/achinthabh',
       live: null,
-      type: 'Monitoring Learning',
+      type: 'DevOps',
+      badge: '📊',
       features: [
-        'Basic metric collection',
-        'Simple dashboard creation',
-        'Resource monitoring setup',
-        'Alert configuration basics'
-      ],
-      level: 'Learning Project'
+        'Scraping node-exporter and kube-state-metrics',
+        'Custom visualization dashboards for RAM/CPU limits',
+        'Prometheus Alertmanager rules configuration',
+        'Automated webhook slack alerts for service down'
+      ]
     },
     {
-      title: 'Dockerized Development Environment',
-      description: 'Learning project: Creating containerized environments for web applications.',
-      technologies: ['Docker', 'Docker Compose', 'Node.js'],
-      github: 'https://github.com/achinthabh/docker-learning',
+      title: 'Dockerized Multi-Service Environment',
+      description: 'Creating local containerized setups using Docker Compose to orchestrate web applications, database service instances, and reverse proxies.',
+      technologies: ['Docker', 'Docker Compose', 'NGINX', 'PostgreSQL', 'Redis'],
+      github: 'https://github.com/achinthabh',
       live: null,
-      type: 'Containerization Learning',
+      type: 'DevOps',
+      badge: '🐳',
       features: [
-        'Basic Dockerfile creation',
-        'Multi-container applications',
-        'Volume mounting practice',
-        'Network configuration basics'
-      ],
-      level: 'Learning Project'
+        'Multi-container network definition with isolation',
+        'NGINX configured as a local reverse proxy',
+        'Persistent database storage using Docker Volumes',
+        'Environment variable configuration management'
+      ]
+    },
+    {
+      title: 'Ansible Configuration Management',
+      description: 'Automated server provisioning and software configuration setup using Ansible playbooks to establish secure system state.',
+      technologies: ['Ansible', 'Linux', 'YAML', 'SSH Security'],
+      github: 'https://github.com/achinthabh',
+      live: null,
+      type: 'DevOps',
+      badge: '⚙️',
+      features: [
+        'Automated package installs and updates',
+        'SSH hardening and firewalls (UFW) setup via playbooks',
+        'System user management with sudo access',
+        'Idempotent task definitions for reliable execution'
+      ]
     }
   ]
 
-  // Get unique project types for filtering
-  const projectTypes = ['All', ...new Set(projects.map(p => p.type))]
-  
-  // Filter projects based on selected type
+  const projectTypes = ['All', 'Cybersecurity', 'Web Development', 'DevOps']
   const filteredProjects = selectedType && selectedType !== 'All'
     ? projects.filter(p => p.type === selectedType)
     : projects
@@ -172,10 +218,9 @@ const Projects = () => {
       <div className="container">
         <div className="section-title">
           <h2>My Projects</h2>
-          <p>Full-stack development projects & DevOps learning initiatives</p>
+          <p>Real cybersecurity tools, full-stack web apps & DevOps projects</p>
         </div>
-        
-        {/* Project Filter Tabs */}
+
         <div className="project-filters" role="group" aria-label="Filter projects by type">
           {projectTypes.map(type => (
             <button
@@ -183,35 +228,42 @@ const Projects = () => {
               className={`filter-btn ${selectedType === type || (!selectedType && type === 'All') ? 'active' : ''}`}
               onClick={() => setSelectedType(type === 'All' ? null : type)}
               aria-pressed={selectedType === type || (!selectedType && type === 'All')}
+              style={type === 'Cybersecurity' && (selectedType === 'Cybersecurity' || (!selectedType && false)) ? {
+                borderColor: 'rgba(255,0,110,0.5)',
+                color: '#ff006e'
+              } : {}}
             >
-              {type}
+              {type === 'Cybersecurity' && '🔐 '}{type === 'DevOps' && '⚙️ '}{type === 'Web Development' && '🌐 '}{type}
             </button>
           ))}
         </div>
-        
+
         <div className="projects-grid">
           {filteredProjects.map((project, idx) => (
-            <div key={idx} className={`project-card ${project.level === 'Learning Project' ? 'learning-project' : 'real-project'}`}>
+            <div key={idx} className={`project-card ${project.highlight ? 'cyber-project' : ''}`}
+              style={project.highlight ? {
+                borderColor: 'rgba(255, 0, 110, 0.3)',
+                boxShadow: '0 4px 20px rgba(255, 0, 110, 0.1)'
+              } : {}}>
               <div className="project-header">
-                <div className="project-type">{project.type}</div>
-                {project.level && <span className="project-level">{project.level}</span>}
+                <div className="project-type" style={project.type === 'Cybersecurity' ? {
+                  background: 'rgba(255,0,110,0.15)',
+                  color: '#ff6e9e',
+                  borderColor: 'rgba(255,0,110,0.3)'
+                } : {}}>
+                  {project.badge} {project.type}
+                </div>
                 <h3>{project.title}</h3>
               </div>
-              
+
               <p className="project-description">{project.description}</p>
-              
-              {project.note && (
-                <div className="project-note">
-                  <i className="fas fa-info-circle"></i> {project.note}
-                </div>
-              )}
-              
+
               <div className="tech-stack">
                 {project.technologies.map((tech, techIdx) => (
                   <span key={techIdx} className="tech-tag">{tech}</span>
                 ))}
               </div>
-              
+
               {project.features && (
                 <ul className="project-features">
                   {project.features.map((feature, featureIdx) => (
@@ -221,44 +273,13 @@ const Projects = () => {
                   ))}
                 </ul>
               )}
-              
+
               <div className="project-links">
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  <i className="fab fa-github"></i> {project.level === 'Learning Project' ? 'View Learning Code' : 'View Source Code'}
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                  <i className="fab fa-github"></i> View Code
                 </a>
-                
-                {project.level === 'Learning Project' ? (
-                  <a 
-                    href={`https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266`}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <i className="fab fa-linkedin"></i> Learning Journey
-                  </a>
-                ) : (
-                  <a 
-                    href="https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <i className="fab fa-linkedin"></i> Project Post
-                  </a>
-                )}
-                
                 {project.live && (
-                  <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
                     <i className="fas fa-external-link-alt"></i> Live Demo
                   </a>
                 )}
@@ -266,39 +287,19 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        
-        {/* LinkedIn Projects Callout */}
+
         <div className="linkedin-projects">
           <div className="linkedin-card">
-            <h3>More Projects on LinkedIn</h3>
-            <p>Check out my project posts and learning journey on LinkedIn:</p>
+            <h3>📌 More Projects on LinkedIn & GitHub</h3>
+            <p>Follow my learning journey and project posts:</p>
             <div className="linkedin-links">
-              <a href="https://www.linkedin.com/posts/janith-wathsala_webdevelopment-tourism-srilanka-activity-7292000718729752578-I6TU" target="_blank" rel="noopener noreferrer">
-                Tourist Web App
-              </a>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7359909721144741889/" target="_blank" rel="noopener noreferrer">
-                Student Management System
-              </a>
-              <a href="https://www.linkedin.com/posts/achintha-bhanuka-wijerathna-250a46266_java-webdevelopment-backend-activity-7329909711640711168-bH_1" target="_blank" rel="noopener noreferrer">
-                Hotel Management System
-              </a>
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7350145038791680001/" target="_blank" rel="noopener noreferrer">
-                E-Commerce Website
-              </a>
-              <a href="https://www.linkedin.com/posts/achintha-bhanuka-wijerathna-250a46266_webdevelopment-frontend-srilankanhiphop-activity-7359909721144741889-tfbQ" target="_blank" rel="noopener noreferrer">
-                Master D Fan Website
-              </a>
-              <a href="https://www.linkedin.com/posts/achintha-bhanuka-wijerathna-250a46266_java-webdevelopment-backend-activity-7329909711640711168-bH_1" target="_blank" rel="noopener noreferrer">
-                Warehouse Management System
-              </a>
+              <a href="https://www.linkedin.com/posts/janith-wathsala_webdevelopment-tourism-srilanka-activity-7292000718729752578-I6TU" target="_blank" rel="noopener noreferrer">Tourist Web App</a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7359909721144741889/" target="_blank" rel="noopener noreferrer">Student Management</a>
+              <a href="https://www.linkedin.com/posts/achintha-bhanuka-wijerathna-250a46266_java-webdevelopment-backend-activity-7329909711640711168-bH_1" target="_blank" rel="noopener noreferrer">Hotel Management</a>
+              <a href="https://www.linkedin.com/posts/achintha-bhanuka-wijerathna-250a46266_webdevelopment-frontend-srilankanhiphop-activity-7359909721144741889-tfbQ" target="_blank" rel="noopener noreferrer">Master D Fan Website</a>
             </div>
-            <a 
-              href="https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="linkedin-profile-btn"
-            >
-              <i className="fab fa-linkedin"></i> View My LinkedIn Profile
+            <a href="https://linkedin.com/in/achintha-bhanuka-wijerathna-250a46266" target="_blank" rel="noopener noreferrer" className="linkedin-profile-btn">
+              <i className="fab fa-linkedin"></i> View LinkedIn Profile
             </a>
           </div>
         </div>
